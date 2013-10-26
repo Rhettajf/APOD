@@ -1,0 +1,173 @@
+/* C
+-----------------------------------------------------------------------------------------------------------*/
+
+/* Vars */
+
+/* bar */
+@d-bar-border: 1px solid #676b52;
+@d-bar-background-color: #7f836a;
+@d-bar-color: #fff;
+@d-bar-shadow-x: 0;
+@d-bar-shadow-y: -1px;
+@d-bar-shadow-radius: 0;
+@d-bar-shadow-color: #5f634a;
+@d-bar-background-start: #9ea289;
+@d-bar-background-end: #71755c;
+@d-bar-link-color: #eaeed5;
+@d-bar-link-visited: #eaeed5;
+@d-bar-link-hover: #eaeed5;
+@d-bar-link-active: #eaeed5;
+
+/* body */
+@d-body-border: 1px solid #979b82;
+@d-body-color: #000;
+@d-body-shadow-x: 0;
+@d-body-shadow-y: 1px;
+@d-body-shadow-radius: 0;
+@d-body-shadow-color: #33371e;
+@d-body-background-color: #f3f7de;
+@d-body-background-start: #dde1c8;
+@d-body-background-end: #cbcfb6;
+@d-body-link-color: #71755c;
+@d-body-link-visited: #71755c;
+@d-body-link-hover: #71755c;
+@d-body-link-active: #71755c;
+
+/* btn-up */
+@d-bup-border: 1px solid #33371e;
+@d-bup-background-color: #62664d;
+@d-bup-color: #fff;
+@d-bup-shadow-x: 0;
+@d-bup-shadow-y: 1px;
+@d-bup-shadow-radius: 0;
+@d-bup-shadow-color: #40442b;
+@d-bup-background-start: #8e9279;
+@d-bup-background-end: #62664d;
+
+/* btn-hover */
+@d-bhover-border: 1px solid #31351c;
+@d-bhover-background-color: #797d64;
+@d-bhover-color: #fff;
+@d-bhover-shadow-x: 0;
+@d-bhover-shadow-y: 1px;
+@d-bhover-shadow-radius: 0;
+@d-bhover-shadow-color: #40442b;
+@d-bhover-background-start: #9da188;
+@d-bhover-background-end: #6a6e55;
+
+/* btn-down */
+@d-bdown-border: 1px solid #474b32;
+@d-bdown-background-color: #7c8067;
+@d-bdown-color: #fff;
+@d-bdown-shadow-x: 0;
+@d-bdown-shadow-y: 1px;
+@d-bdown-shadow-radius: 0;
+@d-bdown-shadow-color: #40442b;
+@d-bdown-background-start: #51553c;
+@d-bdown-background-end: #6e7259;
+
+
+
+
+
+
+/* Style */
+
+.ui-bar-d {
+	border: @d-bar-border;
+	background: @d-bar-background-color;
+	color: @d-bar-color;
+	font-weight: bold;
+	text-shadow: @d-bar-shadow-x @d-bar-shadow-y @d-bar-shadow-radius @d-bar-shadow-color;
+	#jqm > .bg(@d-bar-background-start, @d-bar-background-end);
+}
+.ui-bar-d .ui-link-inherit {
+	color: @d-bar-color;
+}
+
+.ui-bar-d a.ui-link {
+	color: @d-bar-link-color;
+	font-weight: bold;
+	&:visited {
+		color: @d-bar-link-visited;
+	}
+	&:hover {
+		color: @d-bar-link-hover;
+	}
+	&:active {
+		color: @d-bar-link-active;
+	}
+}
+
+.ui-bar-d {
+	font-family: @global-font-family;
+	input, select, textarea, button {
+		font-family: @global-font-family;
+	}
+}
+.ui-body-d,
+.ui-overlay-d {
+	border: @d-body-border;
+	color: @d-body-color;
+	text-shadow: @d-body-shadow-x @d-body-shadow-y @d-body-shadow-radius @d-body-shadow-color;
+	background: @d-body-background-color;
+	#jqm > .bg(@d-body-background-start, @d-body-background-end);
+}
+.ui-overlay-d {
+	background-image: none;
+	border-width: 0;
+}
+.ui-body-d {
+	font-family: @global-font-family;
+	input, select, textarea, button {
+		font-family: @global-font-family;
+	}
+}
+.ui-body-d .ui-link-inherit {
+	color: @d-body-color;
+}
+
+.ui-body-d .ui-link {
+	color: @d-body-link-color;
+	font-weight: bold;
+	&:visited {
+		color: @d-body-link-visited;
+	}
+	&:hover {
+		color: @d-body-link-hover;
+	}
+	&:active {
+		color: @d-body-link-active;
+	}
+}
+
+.ui-btn-up-d {
+	#jqm > .btn-attrs(@d-bup-background-color, @d-bup-border, @d-bup-color);
+	text-shadow: @d-bup-shadow-x @d-bup-shadow-y @d-bup-shadow-radius @d-bup-shadow-color;
+	#jqm > .bg(@d-bup-background-start, @d-bup-background-end);
+	&:visited, a.ui-link-inherit {
+		color: @d-bup-color;
+	}
+}
+.ui-btn-hover-d {
+	#jqm > .btn-attrs(@d-bhover-background-color, @d-bhover-border, @d-bhover-color);
+	text-shadow: @d-bhover-shadow-x @d-bhover-shadow-y @d-bhover-shadow-radius @d-bhover-shadow-color;
+	#jqm > .bg(@d-bhover-background-start, @d-bhover-background-end);
+	&:visited,&:hover,a.ui-link-inherit {
+		color: @d-bhover-color;
+	}
+}
+.ui-btn-down-d {
+	#jqm > .btn-attrs(@d-bdown-background-color, @d-bdown-border, @d-bdown-color);
+	text-shadow: @d-bdown-shadow-x @d-bdown-shadow-y @d-bdown-shadow-radius @d-bdown-shadow-color;
+	#jqm > .bg(@d-bdown-background-start, @d-bdown-background-end);
+	&:visited,&:hover,a.ui-link-inherit {
+		color: @d-bdown-color;
+	}
+}
+.ui-btn-up-d,
+.ui-btn-hover-d,
+.ui-btn-down-d {
+	font-family: @global-font-family;
+	text-decoration: none;
+}

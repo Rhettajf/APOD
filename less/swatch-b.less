@@ -1,0 +1,171 @@
+/* B
+-----------------------------------------------------------------------------------------------------------*/
+
+/* Vars */
+
+/* bar */
+@b-bar-border: 1px solid #c85501;
+@b-bar-background-color: #e76201;
+@b-bar-color: #fff;
+@b-bar-shadow-x: 0;
+@b-bar-shadow-y: -1px;
+@b-bar-shadow-radius: 0;
+@b-bar-shadow-color: #ae4b01;
+@b-bar-background-start: #ff8328;
+@b-bar-background-end: #cf5801;
+@b-bar-link-color: #cf5801;
+@b-bar-link-visited: #cf5801;
+@b-bar-link-hover: #cf5801;
+@b-bar-link-active: #cf5801;
+
+/* body */
+@b-body-border: 1px solid #e76201;
+@b-body-color: #000;
+@b-body-shadow-x: 0;
+@b-body-shadow-y: 1px;
+@b-body-shadow-radius: 0;
+@b-body-shadow-color: #ff7a19;
+@b-body-background-color: #fff1e5;
+@b-body-background-start: #ff8328;
+@b-body-background-end: #cf5801;
+@b-body-link-color: #cd5801;
+@b-body-link-visited: #cd5801;
+@b-body-link-hover: #cd5801;
+@b-body-link-active: #cd5801;
+
+/* btn-up */
+@b-bup-border: 1px solid #5d2801;
+@b-bup-background-color: #b24c01;
+@b-bup-color: #fff;
+@b-bup-shadow-x: 0;
+@b-bup-shadow-y: 1px;
+@b-bup-shadow-radius: 0;
+@b-bup-shadow-color: #743201;
+@b-bup-background-start: #fe6e05;
+@b-bup-background-end: #b24c01;
+
+/* btn-hover */
+@b-bhover-border: 1px solid #592701;
+@b-bhover-background-color: #dc5e01;
+@b-bhover-color: #fff;
+@b-bhover-shadow-x: 0;
+@b-bhover-shadow-y: 1px;
+@b-bhover-shadow-radius: 0;
+@b-bhover-shadow-color: #743201;
+@b-bhover-background-start: #ff8226;
+@b-bhover-background-end: #c15201;
+
+/* btn-down */
+@b-bdown-border: 1px solid #813701;
+@b-bdown-background-color: #e16001;
+@b-bdown-color: #fff;
+@b-bdown-shadow-x: 0;
+@b-bdown-shadow-y: 1px;
+@b-bdown-shadow-radius: 0;
+@b-bdown-shadow-color: #743201;
+@b-bdown-background-start: #933f01;
+@b-bdown-background-end: #c85501;
+
+
+
+
+/* Style */
+
+.ui-bar-b {
+	border: @b-bar-border;
+	background: @b-bar-background-color;
+	color: @b-bar-color;
+	font-weight: bold;
+	text-shadow: @b-bar-shadow-x @b-bar-shadow-y @b-bar-shadow-radius @b-bar-shadow-color;
+	#jqm > .bg(@b-bar-background-start, @b-bar-background-end);
+}
+.ui-bar-b .ui-link-inherit {
+	color: @b-bar-color;
+}
+
+.ui-bar-b a.ui-link {
+	color: @b-bar-link-color;
+	font-weight: bold;
+	&:visited {
+		color: @b-bar-link-visited;
+	}
+	&:hover {
+		color: @b-bar-link-hover;
+	}
+	&:active {
+		color: @b-bar-link-active;
+	}
+}
+
+.ui-bar-b {
+	font-family: @global-font-family;
+	input, select, textarea, button {
+		font-family: @global-font-family;
+	}
+}
+.ui-body-b,
+.ui-overlay-b {
+	border: @b-body-border;
+	color: @b-body-color;
+	text-shadow: @b-body-shadow-x @b-body-shadow-y @b-body-shadow-radius @b-body-shadow-color;
+	background: @b-body-background-color;
+	#jqm > .bg(@b-body-background-start, @b-body-background-end);
+}
+.ui-overlay-b {
+	background-image: none;
+	border-width: 0;
+}
+.ui-body-b {
+	font-family: @global-font-family;
+	input, select, textarea, button {
+		font-family: @global-font-family;
+	}
+}
+.ui-body-b .ui-link-inherit {
+	color: @b-body-color;
+}
+
+.ui-body-b .ui-link {
+	color: @b-body-link-color;
+	font-weight: bold;
+	&:visited {
+		color: @b-body-link-visited;
+	}
+	&:hover {
+		color: @b-body-link-hover;
+	}
+	&:active {
+		color: @b-body-link-active;
+	}
+}
+
+.ui-btn-up-b {
+	#jqm > .btn-attrs(@b-bup-background-color, @b-bup-border, @b-bup-color);
+	text-shadow: @b-bup-shadow-x @b-bup-shadow-y @b-bup-shadow-radius @b-bup-shadow-color;
+	#jqm > .bg(@b-bup-background-start, @b-bup-background-end);
+	&:visited, a.ui-link-inherit {
+		color: @b-bup-color;
+	}
+}
+.ui-btn-hover-b {
+	#jqm > .btn-attrs(@b-bhover-background-color, @b-bhover-border, @b-bhover-color);
+	text-shadow: @b-bhover-shadow-x @b-bhover-shadow-y @b-bhover-shadow-radius @b-bhover-shadow-color;
+	#jqm > .bg(@b-bhover-background-start, @b-bhover-background-end);
+	&:visited,&:hover,a.ui-link-inherit {
+		color: @b-bhover-color;
+	}
+}
+.ui-btn-down-b {
+	#jqm > .btn-attrs(@b-bdown-background-color, @b-bdown-border, @b-bdown-color);
+	text-shadow: @b-bdown-shadow-x @b-bdown-shadow-y @b-bdown-shadow-radius @b-bdown-shadow-color;
+	#jqm > .bg(@b-bdown-background-start, @b-bdown-background-end);
+	&:visited,&:hover,a.ui-link-inherit {
+		color: @b-bdown-color;
+	}
+}
+.ui-btn-up-b,
+.ui-btn-hover-b,
+.ui-btn-down-b {
+	font-family: @global-font-family;
+	text-decoration: none;
+}

@@ -1,0 +1,171 @@
+/* A
+-----------------------------------------------------------------------------------------------------------*/
+
+/* Vars */
+
+/* bar */
+@f-bar-border: 1px solid #333;
+@f-bar-background-color: #111;
+@f-bar-color: #fff;
+@f-bar-shadow-x: 0;
+@f-bar-shadow-y: -1px;
+@f-bar-shadow-radius: 0;
+@f-bar-shadow-color: #000;
+@f-bar-background-start: #3c3c3c;
+@f-bar-background-end: #111;
+@f-bar-link-color: #7cc4e7;
+@f-bar-link-visited: #2489ce;
+@f-bar-link-hover: #2489ce;
+@f-bar-link-active: #2489ce;
+
+/* body */
+@f-body-border: 1px solid #444;
+@f-body-color: #fff;
+@f-body-shadow-x: 0;
+@f-body-shadow-y: 1px;
+@f-body-shadow-radius: 0;
+@f-body-shadow-color: #111;
+@f-body-background-color: #222;
+@f-body-background-start: #444;
+@f-body-background-end: #222;
+@f-body-link-color: #2489ce;
+@f-body-link-visited: #2489ce;
+@f-body-link-hover: #2489ce;
+@f-body-link-active: #2489ce;
+
+/* btn-up */
+@f-bup-border: 1px solid #111;
+@f-bup-background-color: #333;
+@f-bup-color: #fff;
+@f-bup-shadow-x: 0;
+@f-bup-shadow-y: 1px;
+@f-bup-shadow-radius: 0;
+@f-bup-shadow-color: #111;
+@f-bup-background-start: #444;
+@f-bup-background-end: #2d2d2d;
+
+/* btn-hover */
+@f-bhover-border: 1px solid #000;
+@f-bhover-background-color: #444;
+@f-bhover-color: #fff;
+@f-bhover-shadow-x: 0;
+@f-bhover-shadow-y: 1px;
+@f-bhover-shadow-radius: 0;
+@f-bhover-shadow-color: #111;
+@f-bhover-background-start: #555;
+@f-bhover-background-end: #383838;
+
+/* btn-down */
+@f-bdown-border: 1px solid #000;
+@f-bdown-background-color: #222;
+@f-bdown-color: #fff;
+@f-bdown-shadow-x: 0;
+@f-bdown-shadow-y: 1px;
+@f-bdown-shadow-radius: 0;
+@f-bdown-shadow-color: #111;
+@f-bdown-background-start: #202020;
+@f-bdown-background-end: #2c2c2c;
+
+
+
+
+/* Style */
+
+.ui-bar-f {
+	border: @f-bar-border;
+	background: @f-bar-background-color;
+	color: @f-bar-color;
+	font-weight: bold;
+	text-shadow: @f-bar-shadow-x @f-bar-shadow-y @f-bar-shadow-radius @f-bar-shadow-color;
+	#jqm > .bg(@f-bar-background-start, @f-bar-background-end);
+}
+.ui-bar-f .ui-link-inherit {
+	color: @f-bar-color;
+}
+
+.ui-bar-f a.ui-link {
+	color: @f-bar-link-color;
+	font-weight: bold;
+	&:visited {
+		color: @f-bar-link-visited;
+	}
+	&:hover {
+		color: @f-bar-link-hover;
+	}
+	&:active {
+		color: @f-bar-link-active;
+	}
+}
+
+.ui-bar-f {
+	font-family: @global-font-family;
+	input, select, textarea, button {
+		font-family: @global-font-family;
+	}
+}
+.ui-body-f,
+.ui-overlay-f {
+	border: @f-body-border;
+	color: @f-body-color;
+	text-shadow: @f-body-shadow-x @f-body-shadow-y @f-body-shadow-radius @f-body-shadow-color;
+	background: @f-body-background-color;
+	#jqm > .bg(@f-body-background-start, @f-body-background-end);
+}
+.ui-overlay-f {
+	background-image: none;
+	border-width: 0;
+}
+.ui-body-f {
+	font-family: @global-font-family;
+	input, select, textarea, button {
+		font-family: @global-font-family;
+	}
+}
+.ui-body-f .ui-link-inherit {
+	color: @f-body-color;
+}
+
+.ui-body-f .ui-link {
+	color: @f-body-link-color;
+	font-weight: bold;
+	&:visited {
+		color: @f-body-link-visited;
+	}
+	&:hover {
+		color: @f-body-link-hover;
+	}
+	&:active {
+		color: @f-body-link-active;
+	}
+}
+
+.ui-btn-up-f {
+	#jqm > .btn-attrs(@f-bup-background-color, @f-bup-border, @f-bup-color);
+	text-shadow: @f-bup-shadow-x @f-bup-shadow-y @f-bup-shadow-radius @f-bup-shadow-color;
+	#jqm > .bg(@f-bup-background-start, @f-bup-background-end);
+	&:visited, a.ui-link-inherit {
+		color: @f-bup-color;
+	}
+}
+.ui-btn-hover-f {
+	#jqm > .btn-attrs(@f-bhover-background-color, @f-bhover-border, @f-bhover-color);
+	text-shadow: @f-bhover-shadow-x @f-bhover-shadow-y @f-bhover-shadow-radius @f-bhover-shadow-color;
+	#jqm > .bg(@f-bhover-background-start, @f-bhover-background-end);
+	&:visited,&:hover,a.ui-link-inherit {
+		color: @f-bhover-color;
+	}
+}
+.ui-btn-down-f {
+	#jqm > .btn-attrs(@f-bdown-background-color, @f-bdown-border, @f-bdown-color);
+	text-shadow: @f-bdown-shadow-x @f-bdown-shadow-y @f-bdown-shadow-radius @f-bdown-shadow-color;
+	#jqm > .bg(@f-bdown-background-start, @f-bdown-background-end);
+	&:visited,&:hover,a.ui-link-inherit {
+		color: @f-bdown-color;
+	}
+}
+.ui-btn-up-f,
+.ui-btn-hover-f,
+.ui-btn-down-f {
+	font-family: @global-font-family;
+	text-decoration: none;
+}

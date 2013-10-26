@@ -1,0 +1,146 @@
+@import "framework.less";
+
+/* Structure */
+
+/* links within "buttons" 
+-----------------------------------------------------------------------------------------------------------*/
+
+a.ui-link-inherit {
+	text-decoration: none !important;
+}
+
+
+/* Active class used as the "on" state across theme
+-----------------------------------------------------------------------------------------------------------*/
+.ui-btn-active {
+	border:  @global-active-border;
+	background: @global-active-background-color;
+	font-weight: bold;
+	color: @global-active-color;
+	cursor: pointer;
+	text-shadow: @global-active-shadow-x @global-active-shadow-y @global-active-shadow-radius @global-active-shadow-color;
+	text-decoration: none;
+	#jqm > .bg(@global-active-background-start, @global-active-background-end);
+	font-family: @global-font-family;
+}
+.ui-btn-active:visited,
+.ui-btn-active:hover,
+.ui-btn-active a.ui-link-inherit {
+	color: @global-active-color;
+}
+
+
+/* button inner top highlight
+-----------------------------------------------------------------------------------------------------------*/
+
+.ui-btn-inner {
+	border-top: 1px solid 	#fff;
+	border-color: 			rgba(255,255,255,.3);
+}
+
+
+/* corner rounding classes
+-----------------------------------------------------------------------------------------------------------*/
+
+.ui-corner-all {
+	#jqm > .border-radius(@global-radii-blocks);
+}
+
+/* Form field separator
+-----------------------------------------------------------------------------------------------------------*/
+.ui-br {
+	border-color: rgb(130,130,130);
+	border-color: rgba(130,130,130,.3);
+	border-style: solid;
+}
+
+/* Interaction cues
+-----------------------------------------------------------------------------------------------------------*/
+.ui-disabled {
+	filter: Alpha(Opacity=30);
+	opacity: .3;
+	zoom: 1;
+}
+.ui-disabled,
+.ui-disabled a {
+	cursor: default !important;
+	pointer-events: none;
+}
+
+/* Button corner classes
+-----------------------------------------------------------------------------------------------------------*/
+
+.ui-btn-corner-all {
+	#jqm > .border-radius(@global-radii-buttons);
+}
+
+/* radius clip workaround for cleaning up corner trapping */
+.ui-corner-all,
+.ui-btn-corner-all {
+  -webkit-background-clip: padding;
+          background-clip: padding-box;
+}
+
+/* Overlay / modal
+-----------------------------------------------------------------------------------------------------------*/
+
+.ui-overlay {
+	background: #666;
+	filter: Alpha(Opacity=50);
+	opacity: .5;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+.ui-overlay-shadow {
+	#jqm > .box-shadow(0px 0px 12px rgba(0,0,0,.6));
+}
+.ui-shadow {
+	#jqm > .box-shadow(@global-box-shadow-size @global-box-shadow-color);
+}
+.ui-bar-a .ui-shadow,
+.ui-bar-b .ui-shadow ,
+.ui-bar-c .ui-shadow  {
+	#jqm > .box-shadow(0px 1px 0 rgba(255,255,255,.3));
+}
+.ui-shadow-inset {
+	#jqm > .box-shadow(inset 0px 1px 4px rgba(0,0,0,.2));
+}
+.ui-icon-shadow {
+	#jqm > .box-shadow(@global-icon-shadow-size @global-icon-shadow-color);
+}
+
+/* Focus state - set here for specificity (note: these classes are added by JavaScript)
+-----------------------------------------------------------------------------------------------------------*/
+
+.ui-btn:focus, .ui-link-inherit:focus {
+	outline: 0;
+}
+.ui-btn.ui-focus {
+	z-index: 1;
+}
+.ui-focus,
+.ui-btn:focus {
+	#jqm > .box-shadow(inset 0px 0px 3px @global-active-background-color, 0px 0px 9px @global-active-background-color);
+}
+.ui-input-text.ui-focus,
+.ui-input-search.ui-focus {
+	#jqm > .box-shadow(0px 0px 12px @global-active-background-color);	
+}
+
+/* unset box shadow in browsers that don't do it right
+-----------------------------------------------------------------------------------------------------------*/
+
+.ui-mobile-nosupport-boxshadow * {
+	-moz-box-shadow: none !important;
+	-webkit-box-shadow: none !important;
+	box-shadow: none !important;
+}
+
+/* ...and bring back focus */
+.ui-mobile-nosupport-boxshadow .ui-focus,
+.ui-mobile-nosupport-boxshadow .ui-btn:focus,
+.ui-mobile-nosupport-boxshadow .ui-link-inherit:focus {
+	outline-width: 1px;
+	outline-style: auto;
+}
